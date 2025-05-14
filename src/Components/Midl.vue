@@ -167,7 +167,7 @@
     margin-left: 400px;
     margin-top: 100px;
     cursor: pointer;
-    font-size: 15px;
+    font-size: 14px;
 
 }
 
