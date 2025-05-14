@@ -10,13 +10,21 @@ export default defineConfig({
   plugins: [
     vue(),
     javascriptObfuscator({
-      compact:true,
-      controlFlowFlattening:true,
-      deadCodeInjection:true,
-      rotateStringArray:true,
-      stringArrayEncoding:["base64"],
-      disableConsolOutput:true,
-    }),
+  compact: true,
+  controlFlowFlattening: true,
+  deadCodeInjection: true,
+  debugProtection: false,
+  disableConsoleOutput: true,
+
+  // 🔑 Add these to get random class/function/variable names:
+  renameGlobals: true,           // Renames global variables/functions
+  identifierNamesGenerator: 'hexadecimal', // or 'mangled'
+
+  // Optional: makes it even more unpredictable
+  stringArray: true,
+  rotateStringArray: true,
+  stringArrayEncoding: ['base64'],
+}),
     vueDevTools(),
   ],
   resolve: {
