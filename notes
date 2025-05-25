@@ -571,3 +571,38 @@ button:hover {
 }
 </style>
 <script setup>
+/* ---------------------------------------------- */
+@media screen and (max-width:600px) {
+  .banner {
+    flex-direction: column-reverse;
+    display: flex;
+    height: 1251px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .banner>img {
+    transform: none;
+    top: calc(100% - 860px );
+    left: calc(100% - 355px);
+    height: 120px;
+    margin: 0;
+  }
+
+  .banner > div:first-child > div:first-child > h1 {
+    max-width: fit-content;
+    font-size: 24px;  
+    color: red;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  .banner div>img {
+    border-radius: 16px;
+    width: calc(100% - 16px);
+    margin-left: 10px;
+    margin-bottom: 99px
+  }

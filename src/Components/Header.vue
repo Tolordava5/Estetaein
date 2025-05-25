@@ -2,7 +2,7 @@
     <header>
         <nav>
             <div>
-                <img src="@/assets/photos/Symbol.png" alt="Background" />
+                <img src="../assets/photos/Symbol.png" alt="Background" />
                 <h3>Estatein</h3>
             </div>
             <ul class="new-list">
@@ -11,17 +11,32 @@
             </ul>
             <button>Contact Us</button>
         </nav>
+        <div class="mobile" :class="{ active: isActive }" @click="toggleActive">
+            <div>
+                <img src="../assets/photos/Symbol.png" alt="Background" />
+                <h3>Estatein</h3>
+            </div>
+            <img src="../assets/photos/list.png" alt="">
+            <ul class="new-list">
+                <li v-for="(item, index) in newsList" :key="index">{{ item }}</li>
+            </ul>
+        </div>
+        <ul class="new-list">
+            <li v-for="(item, index) in newsList" :key="index">{{ item }}</li>
 
+        </ul>
 
     </header>
 </template>
 
 <style scoped>
-
+header {
+    background-color: #1A1A1A;
+}
 
 header nav {
     display: flex;
-    background-color: #1A1A1A;
+
     position: relative;
     color: white;
     align-items: center;
@@ -59,6 +74,62 @@ header nav button {
 
 }
 
+.mobile {
+    display: none;
+}
+
+.mobile+.new-list {
+    display: none;
+}
+
+@media screen and (max-width:600px) {
+    nav {
+        display: none !important;
+    }
+
+    .mobile {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        background-color: transparent;
+        padding: 20px;
+        gap: 10px;
+    }
+
+    .mobile div {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        color: white;
+    }
+
+    .mobile ul {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        overflow: hidden;
+        max-height: 0;
+        opacity: 1;
+        transform: translateY(-10px);
+        transition: max-height 0.6s ease, opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .mobile.active ul {
+        max-height: 500px;
+        opacity: 1;
+        transform: translateY(0);
+        display: flex;
+    }
+    .mobile > img{
+        width: 40px;
+        height: 40px;
+        margin-left: 100px;
+        cursor: pointer;
+    }
+    .mobile.active > img {
+    transform: rotate(360deg);
+    transition: transform 0.3s ease;
+    }
+}
 </style>
 
 <script setup>
@@ -72,4 +143,9 @@ const newsList = ref([
     "Services",
 ])
 
+const isActive = ref(false)
+
+function toggleActive() {
+    isActive.value = !isActive.value
+}
 </script>

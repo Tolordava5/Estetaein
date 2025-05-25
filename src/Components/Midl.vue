@@ -237,6 +237,7 @@
   background-color: #1a1a1a;
   border: 2px solid #1a1a1a;
 }
+
 </style>
 
 
@@ -271,11 +272,29 @@ const properties = [
   {
     title: 'Modern Minimalist Flat',
     description: 'A bright and cozy flat perfect for city living.',
-    image: 'https://via.placeholder.com/400x300',
+    image: new URL('@/assets/photos/Appartament.png', import.meta.url).href,
     details: ['1-Bedroom', '1-Bathroom', '1-Garage'],
     price: '$430,000'
-  }
+  },
+  {
+    title: 'Rustic Retreat Cottage',
+    description:
+      'An elegant 3-bedroom, 2.5-bathroom townhouse in a gated community.',
+    image: new URL('@/assets/photos/Cottage.png', import.meta.url).href,
+      details: ['3-Bedroom', '2-Bathroom', '1-Toilet'],
+    price: '$820,000'
+  },
+  {
+    title: 'Seaside Serenity Villa',
+    description:
+      'A stunning 4-bedroom, 3-bathroom villa in a peaceful suburban neighborhood.',
+    image: new URL('@/assets/photos/Villa.png', import.meta.url).href,
+    details: ['4-Bedroom', '3-Bathroom', '1-Toilet'],
+    price: '$1,250,000'
+  },
+
 ]
+
 
 const sliderIndex = ref(0)
 
