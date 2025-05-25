@@ -9,52 +9,69 @@
 
 <style scoped>
 .news {
-    display:flex;
-    height: 252px;
-    align-items: center;
-    background-color: #161414;
-    color: white;
-    border: 12px solid #1A1A1A;
-    gap: 20px;
-}
-.news div{
-    background-color:#1A1A1A;
-    width:420px;
-    height: 212px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border-radius: 12px;
-    margin-left: 25px;
-    font-size: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  background-color: #161414;
+  color: white;
+  border: 12px solid #1A1A1A;
+  justify-content: center;
+  padding: 20px;
 }
 
-  @media screen and (max-width:600px){
-  .news{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    width: max-content !important;
-    padding-right:12px;
-    height: 300px;
-    gap:1px !important;
+.news-item {
+  background-color: #1A1A1A;
+  width: 280px;
+  height: 212px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  font-size: 20px;
+  text-align: center;
+  padding: 10px;
+}
+
+.news-img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.news-text {
+  font-size: 16px;
+  color: white;
+}
+
+@media screen and (max-width: 600px) {
+  .news {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 10px;
+    border-width: 6px;
   }
-  .news div{
-    display: flex;
-    width: 150px;
-    height: 100px;
-    margin-left:20px ;
+
+  .news-item {
+    width: 100%;
+    max-width: 90%;
+    height: auto;
+    padding: 20px 10px;
+    gap: 10px;
   }
-  .news div img{
+
+  .news-img {
     width: 50px;
     height: 50px;
   }
-  .news div p{
-    font-size: 12px;
+
+  .news-text {
+    font-size: 14px;
   }
 }
-</style>
 
+</style>
 
 <script setup>
 import { ref } from 'vue'
