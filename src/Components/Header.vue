@@ -16,7 +16,7 @@
                 <img src="../assets/photos/Symbol.png" alt="Background" />
                 <h3>Estatein</h3>
             </div>
-            <img src="../assets/photos/list.png" alt="">
+            <img src="@/assets/photos/List.png" alt="">
             <ul class="new-list">
                 <li v-for="(item, index) in newsList" :key="index">{{ item }}</li>
             </ul>
