@@ -72,8 +72,7 @@
   display: flex;
   justify-content: space-between;
   align-items: start;
-  margin-left: 100px;
-  
+  padding-left: 100px;
 }
 
 .intro-text {
@@ -86,7 +85,6 @@
 .intro h2 {
   font-size: 48px;
   color: white;
-  margin: 0;
 }
 
 .intro p {
@@ -236,6 +234,78 @@
 .arrow-btn.right {
   background-color: #1a1a1a;
   border: 2px solid #1a1a1a;
+}
+@media screen and (max-width: 600px) {
+  .featured-section {
+    padding: 20px;
+  }
+
+  .intro {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 0;
+  }
+
+  .intro-text {
+    margin-top: 20px;
+    margin-right: 0;
+    background: none;
+  }
+
+  .intro h2 {
+    font-size: 32px;
+  }
+
+  .intro p {
+    font-size: 16px;
+  }
+
+  .view-all-btn {
+    display: none;
+  }
+
+  .property-slider {
+    display: flex;
+    margin-left: 0;
+    gap: 40px;
+  }
+
+  .property-card {
+  
+    width: calc(100% - 20px); 
+    margin-left: 0px;
+    height: auto;
+    margin-left: 10px;
+  }
+
+  .icons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  .icon-detail{
+    width:max-content;
+  }
+  .icon-detail:nth-child(3){
+    display: none;
+  }
+
+  .details-btn {
+    width: 100%;
+  }
+  .price-info h4 {
+  font-size:12px;
+}
+ .price-info{
+  margin-right: 10px;
+ }
+.price-info h5 {
+  font-size: 15px;
+}
+.details-btn {
+  width: 170px;
+}
+
 }
 
 </style>

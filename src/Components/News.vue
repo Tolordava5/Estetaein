@@ -29,6 +29,30 @@
     margin-left: 25px;
     font-size: 20px;
 }
+
+  @media screen and (max-width:600px){
+  .news{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: max-content !important;
+    padding-right:12px;
+    height: 300px;
+    gap:1px !important;
+  }
+  .news div{
+    display: flex;
+    width: 150px;
+    height: 100px;
+    margin-left:20px ;
+  }
+  .news div img{
+    width: 50px;
+    height: 50px;
+  }
+  .news div p{
+    font-size: 12px;
+  }
+}
 </style>
 
 
@@ -48,11 +72,11 @@ const news = ref([
   },
   {
     image:"apart.png",
-    text: "Effortless Property Managment",
+    text: "Effortless Property",
   },
   {
     image:"sun.png",
-    text:"Smart Investments, Informed Decisions"
+    text:"Smart Investments"
   }
 ])
 </script>

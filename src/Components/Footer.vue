@@ -65,5 +65,59 @@
     color: white;
     font-size: 15px;
 }
+@media screen and (max-width: 600px) {
+  .Footer_intro {
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    text-align:flex-start ;
+    gap: 20px;
+    height: fit-content;
+  }
+
+  .Footer_intro div:first-child img {
+    display: flex;
+    flex-direction:column;
+    width: 340px;
+    position: absolute;
+  }
+
+  .Footer_intro h2 {
+    padding: 0;
+    font-size: 28px;
+  }
+
+  .Footer_intro p {
+    position: relative;
+    display: flex;
+    text-align: start;
+    padding: 0 ;
+    font-size: 16px;
+    top: 10px;
+  }
+
+  .Footer_intro div:nth-child(2) {
+    position: static;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    position: relative;;
+  }
+
+  .Footer_intro div:nth-child(2) img {
+   display: none;
+    
+  }
+
+  .Footer_intro div:nth-child(2) button {
+    margin: 0;
+    width: 100%;
+    max-width: 250px;
+    margin-top: 10px;
+  }
+}
+
 
 </style>
