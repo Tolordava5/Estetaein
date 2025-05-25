@@ -9,19 +9,18 @@
 
 <style scoped>
 .news {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  justify-content: space-around;
   gap: 20px;
   background-color: #161414;
   color: white;
   border: 12px solid #1A1A1A;
-  justify-content: center;
   padding: 20px;
 }
 
 .news-item {
   background-color: #1A1A1A;
-  width: 280px;
+  width: 400px;
   height: 212px;
   display: flex;
   flex-direction: column;
@@ -47,8 +46,8 @@
 
 @media screen and (max-width: 600px) {
   .news {
-    flex-direction: column;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     padding: 20px 10px;
     border-width: 6px;
   }
